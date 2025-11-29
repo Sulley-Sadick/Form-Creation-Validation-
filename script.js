@@ -20,29 +20,32 @@ window.addEventListener("DOMContentLoaded", function () {
     const messages = [];
 
     // usernameInput.length < 3
-    if (usernameInput.length < 3)
+    if (usernameInput.length < 3) {
       // set isValid = false
       isValid = false;
 
-    // push error message to messages array
-    messages.push("username should be atleast more than 3 characters.");
+      // push error message to messages array
+      messages.push("username should be atleast more than 3 characters.");
+    }
 
     // emailInput does not contain @
-    if (!emailInput.includes("@"))
+    if (!emailInput.includes("@") && !emailInput.includes(".")) {
       // set isValid = false
 
       isValid = false;
 
-    // push error message to messages array
-    messages.push("email should contain @ sign.");
+      // push error message to messages array
+      messages.push("email should contain @ sign.");
+    }
 
     // passwordInput.length <= 8
-    if (passwordInput.length <= 8)
+    if (passwordInput.length <= 8) {
       // set isValid = false
       isValid = false;
 
-    // push error message to messages array
-    messages.push("password should be atleast more than 8 characters.");
+      // push error message to messages array
+      messages.push("password should be atleast more than 8 characters.");
+    }
 
     // set feebackDiv  display = block
     feedbackDiv.style.display = "block";
